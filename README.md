@@ -25,7 +25,7 @@ DeepSeekChatBot is a locally hosted chatbot powered by [Ollama models](https://o
    git clone https://github.com/yourusername/DeepSeekChatBot.git
    cd DeepSeekChatBot
    ```  
-2. Install dependencies:  
+2. Install dependencies/Python 3.10.6:  
    ```bash
    pip install -r requirements.txt
    ```  
