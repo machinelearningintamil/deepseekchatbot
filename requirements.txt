@@ -1,2 +1,2 @@
-gradio
+gradio==5.16.0
 langchain_ollama
