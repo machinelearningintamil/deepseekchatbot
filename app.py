@@ -26,11 +26,20 @@ def initialize_model(model_name):
     return "Model initialized successfully."
 
 # Function to generate response
-def generate_response(input_text, history):
+def generate_response(message, history):
     if chat_model is None:
         return "Please initialize the model first."
-    response = chat_model.invoke(input_text)
-    return response.content
+    # Invoke the model with user input
+    response = chat_model.invoke(message)
+    # Chunk it up for debugging
+    chunk_size = 2000  # or whatever you like
+    chunks = [response.content[i:i+chunk_size] for i in range(0, len(response.content), chunk_size)]
+    # Return the text content so it shows up in the UI
+    # return response.content
+    # print(chunks)
+
+    return chunks
+
 
 # UI Elements
 chat_model = None
